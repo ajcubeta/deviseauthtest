@@ -1,0 +1,9 @@
+<% @subscriber.each do |sub| %>
+	<ul>
+		<li>
+			<%= sub %> => <%= link_to "Create an Account", :email => sub %>
+		</li>
+	</ul>
+<% end %>
+<%= debug @subscriber %>
+
