@@ -1,7 +1,7 @@
 Deviseauthtest::Application.routes.draw do |map|
-  get "user/index"
-
-  get "user/show"
+  # get "user/index"
+  # 
+  # get "user/show"
 
   resources :projects
 
@@ -11,10 +11,11 @@ Deviseauthtest::Application.routes.draw do |map|
   root :to => "home#index"
   
   match "home/show" => "home#show"
-  
+
+  match "user" => "user#index"  
   match "user/index" => "user#index"
-  match "user/index" => "user#show"
-  
+  match "user/new" => "user#new"
+  match "user/create" => "user#create"
 
 
   # The priority is based upon order of creation:

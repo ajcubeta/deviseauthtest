@@ -1,0 +1,6 @@
+<br />
+<%= form_tag '/user/create' do %>
+	<label>Email:<label> <%= text_field_tag 'email' %><br />
+	<label>Password:<label> <%= password_field_tag 'password' %><br />
+	<div><%= submit_tag 'Save' %></div>
+<% end %>
