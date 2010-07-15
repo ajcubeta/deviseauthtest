@@ -16,10 +16,10 @@ class HomeController < ApplicationController
         if Rails.env == "development"
           email = contact['email'].strip.split(/,|\(|\)|\/|\s/)[0]
           email = "abcd_#{email}"
-          new_user = User.create(:email => email, :password => 'testtest')
+          # new_user = User.create(:email => email, :password => 'testtest')
         else
           email = contact['email'].strip.split(/,|\(|\)|\/|\s/)[0]
-          new_user = User.create(:email => email, :password => 'testtest')
+          # new_user = User.create(:email => email, :password => 'testtest')
         end
         @subscriber << email
       end
