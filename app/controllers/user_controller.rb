@@ -12,16 +12,13 @@ class UserController < ApplicationController
   end
 
   def create
-    @user = User.new
     return if request.get?
-    unless params[:email].blank?
-      @user = User.create(params[:user])
-      if @user.save
-        flash[:notice]= "#{@user.email} has been succesfully added in the system"
-        redirect_to :action => index
-      else
-        render
-      end
+    @user = User.create(params[:user])
+    if @user.save
+      flash[:notice]= "#{@user.email} has been succesfully added in the system"
+      redirect_to :action => "index"
+    else
+      render :action => "new"
     end
   end
 

@@ -1,0 +1,3 @@
+class Candidate < User
+  
+end
