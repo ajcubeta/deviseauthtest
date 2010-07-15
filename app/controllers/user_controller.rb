@@ -4,9 +4,6 @@ class UserController < ApplicationController
   
   def index
     @users = User.find(:all)
-    # job_resultsets = @server_object["jobs "]["jobs"].find("JDID" => params[:id])
-    # puts ">>>>>>  TEST #{job_resultsets} <<<<<<<<<"
-    # @job = job_resultsets[0]
   end
   
   def new 
